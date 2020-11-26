@@ -13,7 +13,7 @@ const [email,setEmail]=useState('');
 
                 </ImageBackground>
                 <View style={styles.input} >
-                    <Text style={styles.label}>email</Text>
+                    <Text style={styles.label}>Email</Text>
                             <TextInput
                             style={styles.inputs}
                             />
