@@ -1,8 +1,10 @@
-import React from 'react'
-import Login from './img/Projeto.png'
-import {  ImageBackground, SafeAreaView, StyleSheet, View } from 'react-native'
-import { TextInput } from 'react-native-gesture-handler'
+import React,{useState} from 'react'
+import Login from './components/img/Projeto.png'
+import { Text, ImageBackground,TextInput, SafeAreaView, StyleSheet, View } from 'react-native'
+
 export default (props)=>{
+const [email,setEmail]=useState('');
+
     return(
         <SafeAreaView style={styles.login}>
                 
@@ -11,8 +13,9 @@ export default (props)=>{
 
                 </ImageBackground>
                 <View style={styles.input} >
+                    <Text style={styles.label}>email</Text>
                             <TextInput
-                            
+                            style={styles.inputs}
                             />
                             <TextInput
                             
@@ -32,9 +35,23 @@ const styles = StyleSheet.create({
         justifyContent: "center"
       },
     input:{
-        flex:2
+        flex:2,
+        backgroundColor: 'gray'
+    },
+    inputs:{
+        backgroundColor:'white',
+        margin: 50 ,
+        
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     login:{
         flex:1
+    },
+    label:{
+        color: 'white',
+        fontSize: 30,
+        textAlign:'center',
+        fontFamily:'Anton-Regular'
     }
 })
